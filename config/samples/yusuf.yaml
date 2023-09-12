@@ -1,0 +1,9 @@
+apiVersion: testgroup.daud.com/v1
+kind: Yusuf
+metadata:
+  name: yusuf-01
+# ---
+# apiVersion: testgroup.daud.com/v1
+# kind: Yusuf
+# metadata:
+#   name: yusuf-02

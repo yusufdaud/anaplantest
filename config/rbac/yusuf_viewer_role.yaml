@@ -1,0 +1,27 @@
+# permissions for end users to view yusufs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: yusuf-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: anaplantest
+    app.kubernetes.io/part-of: anaplantest
+    app.kubernetes.io/managed-by: kustomize
+  name: yusuf-viewer-role
+rules:
+- apiGroups:
+  - testgroup.daud.com
+  resources:
+  - yusufs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - testgroup.daud.com
+  resources:
+  - yusufs/status
+  verbs:
+  - get
